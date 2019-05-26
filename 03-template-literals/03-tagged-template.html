@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Calma, sei que nem fazemos mas isso, é só para o exemplo rs -->
+  <style>
+    .tomato {
+      color: tomato;
+      font-size: 1.3em;
+    }
+  </style>
+
+  <title>03 - Tagged Template</title>
+</head>
+<body>
+
+  <script>
+    const city = 'Dublin';
+    const something = 'Guinnes';
+    const otherThing = 'Leprechaums';
+
+    function tomato(template,  ...values) {
+      return template.reduce((accumulator, part, i) => {
+        return `
+          ${accumulator}
+          <span class="tomato">${values[i -1].toUpperCase()}</span>
+          ${part}
+        `
+      })
+    }
+
+    const ireland = tomato`I live in ${city} the city of ${something} and ${otherThing}!`;
+
+    document.body.innerHTML = ireland;
+  </script>
+</body>
+</html>
