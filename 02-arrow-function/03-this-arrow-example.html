@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>03 - Arrow Function e Lexical This / Exemplo</title>
+</head>
+<body>
+
+  <button id="btn">Faça meu sanduiche!</button>
+
+  <script>
+    const sandwich = {
+      bread: 'white',
+      cheese: 'cheddar',
+
+      prepare: function() {
+        return `Eu quero um sanduiche com pão ${this.bread} e queijo ${this.cheese}.`
+      },
+
+      make: function() {
+        window.setTimeout(() => {
+          console.log(this.prepare());
+        }, 500);
+      }
+    };
+
+    const btn = document.getElementById('btn');
+
+    btn.addEventListener('click', function() { sandwich.make() })
+
+  </script>
+</body>
+</html>
