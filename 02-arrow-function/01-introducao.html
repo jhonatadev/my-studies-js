@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>01 - Introdução Arrow Function</title>
+</head>
+<body>
+  <script>
+    const brasil = ['Maranhão', 'São Paulo', 'Minas Gerais'];
+
+    const love = brasil.map(function(name) {
+      return `I love ${name}!`;
+    });
+    
+    const loveArrow = brasil.map((name) => {
+      return `I love ${name}!`;
+    });
+    
+    const loveArrowSingle = brasil.map(name => {
+      return `I love ${name}!`;
+    });
+    
+    const loveArrowOnLine = brasil.map(name => `I love ${name}!`);
+
+    const loveChain = brasil
+                        .filter(name => name === 'Maranhão')
+                        .map(name => `I love ${name}!`)
+
+    console.log(loveChain);
+  </script>
+</body>
+</html>
