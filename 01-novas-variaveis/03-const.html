@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>03 - Const</title>
+</head>
+<body>
+  <script>
+    const secretNumber = 28;
+
+    const jhon = {
+      name: 'Jhonata',
+      age: 18
+    };
+
+    Object.freeze(jhon); // Agora sim transformamos a nossa -const- imuntavel 
+
+    jhon.age = 20;
+    console.log(jhon);
+
+  </script>
+</body>
+</html>
