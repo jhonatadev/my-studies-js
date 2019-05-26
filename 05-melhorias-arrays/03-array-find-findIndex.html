@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>03 - Array.find e Array.findIndex</title>
+</head>
+<body>
+  <script>
+    const data = [
+      {
+        name: 'Jhonata',
+        age: 18,
+        city: 'Bacabal'
+      },
+      {
+        name: 'Gabriel',
+        age: 20,
+        city: 'Lago da Pedra'
+      }
+    ];
+
+    // const sampleArray = [3, -5, 0];
+    // const underZero = sampleArray.find(x => x > 1);
+    // const underZeroIndex = sampleArray.findIndex(x => x > 1);
+    // console.log(underZero);
+    // console.log(underZeroIndex);
+    
+    const gabriel = data.find(person => person.name === 'Gabriel')
+    const jhonIndex = data.findIndex(person => person.name === 'Jhonata')
+    console.log(gabriel);
+    console.log(jhonIndex);
+
+  </script>
+</body>
+</html>
