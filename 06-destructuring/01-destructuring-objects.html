@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>01 - Destructuring Objects</title>
+</head>
+<body>
+  <script>
+    var data = {
+      name: 'Jhonata',
+      surname: 'Emanuel',
+      age: 18,
+      site: 'https://devupacademy.com/',
+      social: {
+        instagram: '@jhonatadev_',
+        facebook: '/jhonata.emanuel.1656'
+      }
+    };
+
+    // const name = data.name;
+    // const surname = data.surname;
+    // const instagram = data.social.instagram;
+    // console.log(name);
+    // console.log(surname);
+    // console.log(instagram);
+
+    const { name, surname } = data;
+    console.log(name);
+    console.log(surname);
+
+    const { instagram, facebook } = data.social;
+
+    console.log(instagram);
+    console.log(facebook);
+
+    // Mudar a variavel?
+    const { facebook: fb } = data.social;
+    console.log(fb);
+
+    // Um valor que não esteja na var?
+    const { city = 'Bacabal' } = data;
+    console.log(city);
+
+  </script>
+</body>
+</html>
