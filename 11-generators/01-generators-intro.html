@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>01 - Generators Intro</title>
+</head>
+<body>
+  <script>
+    function* genNames() {
+      console.log('Chamando primeiro nome!');
+      yield 'Jhonata';
+
+      console.log('Chamando segundo nome!');
+      yield 'Gabriel';
+
+      console.log('Chamando terceiro nome!');
+      yield 'Guira';
+    }
+
+    const names = genNames();
+
+    console.log(names.next());
+    console.log(names.next());
+    console.log(names.next());
+  </script>
+</body>
+</html>
